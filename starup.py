@@ -42,6 +42,6 @@ if __name__ == '__main__':
     with open('/boot/mystartup.log','a+') as f:
         f.write('\n%s:%s\n' % (datetime.datetime.now(), cmt))
         f.write('%s\n' % ifconfig)
-    os.system('/usr/lib/autossh/autossh -M 20000 -N -R 19998:localhost:22 -p 13140 root@104.236.188.164 &')
+    os.system('/usr/lib/autossh/autossh -M 20000 -N -R 19998:localhost:22 -p remote_port root@remote_ip &')
     print 'I am working....'
 
